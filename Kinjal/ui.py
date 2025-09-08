@@ -24,7 +24,6 @@ class_labels = {
 # --------------------------------------
 st.set_page_config(page_title="Sleep Disorder Predictor", layout="centered")
 
-# Background and CSS styling
 st.markdown(
     """
     <style>
@@ -78,7 +77,7 @@ sleep_duration = st.slider("Sleep Duration (hours)", 0.0, 12.0, 6.5)
 physical_activity = st.slider("Physical Activity Level (minutes/day)", 0, 300, 30)
 stress_level = st.slider("Stress Level (1–10)", 1, 10, 5)
 
-# Blood Pressure Input (Split into high and low)
+# Blood Pressure Input
 bp_input = st.text_input("Blood Pressure (Systolic/Diastolic, e.g., 120/80)", "120/80")
 try:
     high_pressure, low_pressure = [int(x) for x in bp_input.strip().split("/")]
